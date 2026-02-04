@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk11'
+        jdk 'jdk17'
         maven 'maven3'
     }
 
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Build & Run Tests') {
             steps {
-                sh 'mvn clean test'
+                sh 'mvn clean test com.api.tests.*'
             }
         }
     }
