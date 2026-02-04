@@ -2,31 +2,24 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk11'
+        jdk 'jdk17'
         maven 'maven3'
     }
 
     stages {
 
-        stage('Checkout Code') {
+        stage('Build & Run Selected Tests') {
             steps {
-                git branch: 'master',
-                    url: 'https://github.com/SantoshTugay/E2E_Rest_Assured.git'
-            }
-        }
-
-        stage('Build & Run Tests') {
-            steps {
-                sh 'mvn clean test com.api.tests.*'
+                // Windows Jenkins → use bat, NOT sh
+                bat 'mvn clean test -Dtest=SerializationDeserializationE2ETest'
             }
         }
     }
 
     post {
-
         always {
             echo 'Publishing Test Reports'
-            junit 'target/surefire-reports/*.xml'
+            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         }
 
         success {
