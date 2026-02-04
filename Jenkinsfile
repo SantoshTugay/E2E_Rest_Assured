@@ -11,7 +11,7 @@ pipeline {
         stage('Build & Run Selected Tests') {
             steps {
                 // Windows Jenkins → use bat, NOT sh
-                bat 'mvn clean test -Dtest=SerializationDeserializationE2ETest'
+                bat 'mvn clean test -DsuiteXmlFile=testng.xml'
             }
         }
     }
