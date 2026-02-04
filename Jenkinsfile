@@ -10,8 +10,8 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/your-org/api-jackson-tests.git'
+                git branch: 'master',
+                    url: 'https://github.com/SantoshTugay/E2E_Rest_Assured/.git'
             }
         }
 
