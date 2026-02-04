@@ -1,0 +1,16 @@
+{
+  "id": 101,
+  "name": "Santosh",
+  "active": true,
+  "salary": 95000,
+  "department": "QA",
+  "address": {
+    "city": "Hyderabad",
+    "pin": 500081
+  },
+  "skills": ["Java", "Selenium", "API", "CI/CD"],
+  "projects": [
+    { "name": "Billing", "duration": 12 },
+    { "name": "Subscriptions", "duration": 8 }
+  ]
+}

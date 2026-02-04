@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "A",
+    "active": true,
+    "salary": 50000,
+    "department": "QA"
+  },
+  {
+    "id": 2,
+    "name": "B",
+    "active": false,
+    "salary": 60000,
+    "department": "DEV"
+  }
+]
