@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/SantoshTugay/E2E_Rest_Assured/.git'
+                    url: 'https://github.com/SantoshTugay/E2E_Rest_Assured.git'
             }
         }
 
